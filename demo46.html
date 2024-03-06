@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: red;
+            font-size: 40px;
+            text-align: center;
+            padding-top: 150px;
+            font-weight: bold;
+        }
+        p{
+            background-color: white;
+            border: 5px solid red;
+            box-shadow: 0px 0px 15px 10px black inset;
+            height: 100px;
+            width: 550px;
+            line-height: 100px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body onload="demo()">
+    <h1>DIGITAL CLOCK</h1>
+    <p></p>
+    <script>
+        function demo(){
+            d = new Date();
+            p = document.querySelector("p")
+         v= d.toLocaleTimeString()     //d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+":"+d.getMilliseconds();
+         p.innerText=v;
+        }
+        setInterval(demo,1000)
+    </script>
+</body>
+</html>
